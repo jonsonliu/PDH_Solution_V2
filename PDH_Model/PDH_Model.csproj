@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7DB3FDE-69C0-4F27-A205-559E733B8508}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDH_Model</RootNamespace>
+    <AssemblyName>PDH_Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrmOrderRequest.cs" />
+    <Compile Include="CrmOrderResponse.cs" />
+    <Compile Include="CrmProduct.cs" />
+    <Compile Include="ExportCrmModel\ExportCrmOrder.cs" />
+    <Compile Include="ExportCrmModel\ExportCrmOrderProduct.cs" />
+    <Compile Include="RestCrmModel\AnalysisCrmProduct.cs" />
+    <Compile Include="RestCrmModel\AppCrmAccount.cs" />
+    <Compile Include="RestCrmModel\AppCrmAuthorization.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderHistoryProduct.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderHistoryRequest.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderHistoryResponse.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderProduct.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderRequest.cs" />
+    <Compile Include="RestCrmModel\AppCrmOrderResponse.cs" />
+    <Compile Include="RestCrmModel\AppCrmProduct.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductBrandCatalog.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductBrandSubCatalog.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductCategory.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductCategoryRequest.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductParentCatalog.cs" />
+    <Compile Include="RestCrmModel\AppCrmProductSubCatalog.cs" />
+    <Compile Include="RestCrmModel\SupplierCrmProduct.cs" />
+    <Compile Include="RestCrmModel\SupplierCrmProductResponse.cs" />
+    <Compile Include="UpdateProductQuantityResponse.cs" />
+    <Compile Include="UpdateTradeRegistrationResponse.cs" />
+    <Compile Include="CrmAccContRequest.cs" />
+    <Compile Include="CrmAccContResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
